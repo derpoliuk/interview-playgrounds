@@ -1,0 +1,10 @@
+UserInterfaceState.xcuserstate
+*.xcbkptlist
+.DS_Store
+/Pods
+IDEWorkspaceChecks.plist
+contents.xcworkspacedata
+xcschememanagement.plist
+
+fastlane/report.xml
+fastlane/test_output
