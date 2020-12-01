@@ -1,18 +1,32 @@
-DispatchQueue.global().async { [weak self] in
-    guard let info = self?.loadInfo() else {
-        return
-    }
-    DispatchQueue.main.async {
-        self?.info = info
-    }
-}
+import Foundation
 
-DispatchQueue.global().async { [weak self] in
-    guard let self = self else {
-        return
+class Foo {
+    var info = 4
+
+    func loadInfo() -> Int {
+        return 42
     }
-    let info = self.loadInfo()
-    DispatchQueue.main.async {
-        self.info = info
+
+    func foo() {
+        DispatchQueue.global().async { [weak self] in
+            guard let info = self?.loadInfo() else {
+                return
+            }
+            DispatchQueue.main.async {
+                self?.info = info
+            }
+        }
+    }
+
+    func bar() {
+        DispatchQueue.global().async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            let info = self.loadInfo()
+            DispatchQueue.main.async {
+                self.info = info
+            }
+        }
     }
 }
