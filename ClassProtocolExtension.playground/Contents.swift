@@ -3,19 +3,15 @@ import UIKit
 protocol Foo {}
 
 class Bar: Foo {
-
     func someFunction() {
         print("Bar class")
     }
-
 }
 
 extension Foo {
-
     func someFunction() {
         print("Foo class")
     }
-
 }
 
 let bar = Bar()

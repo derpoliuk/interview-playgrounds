@@ -7,4 +7,3 @@ DispatchQueue.main.async {
     }
     print("3")
 }
-
