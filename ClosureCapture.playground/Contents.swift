@@ -1,3 +1,5 @@
+// What will be the output?
+
 var language = "ObjC"
 
 let code = { [language] in

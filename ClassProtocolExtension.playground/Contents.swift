@@ -1,4 +1,4 @@
-import UIKit
+// What the output will be?
 
 protocol Foo {}
 

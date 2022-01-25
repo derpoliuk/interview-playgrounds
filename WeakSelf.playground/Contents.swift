@@ -1,5 +1,7 @@
 import Foundation
 
+// Do `foo()` and `bar()` behave in the same way?
+
 class Foo {
     var info = 4
 
